@@ -1,0 +1,69 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    background-color: #1f232e;
+}
+.App {
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+.pro-sidebar.xs {
+    color:white;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.sidebarHeader {
+    height: 50px;
+}
+.sidebarItem {
+    margin-top: 20px;
+}
+.mainHeader {
+    position: fixed;
+    //width -80px to account for toolbar
+    width: calc(100% - 80px);
+}
+.MainBody {
+    //margin to account for navbar
+    margin-top: 60px;
+}
+.MainPage {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: white;
+}
+.revenueCalcPage {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-top: 2rem;
+}
+.revenueCalcInput {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        div {
+            margin: 0px 20px 0px 20px;
+            input {
+                background-color: transparent;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px solid white;
+                color: white;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+.revenueCalcResult {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    height: 100px;
+    width: 500px;
+    background-color: white;
+    color: black;
+}
