@@ -131,7 +131,7 @@ var pulldata = {/*INSERTING NEW GAMES*/
 
     /*REST API FUNCTIONS*/
     GetGameData: async function () {
-        var text = "SELECT * FROM game";
+        var text = "SELECT * FROM game WHERE data_created = true";
         try {
             var result = await pool.query(text);
             return result.rows;

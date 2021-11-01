@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const port = process.env.port || 5000;
 const axios = require('axios');
+const cors = require('cors');
 const pulldata = require('./pulldata.js');
-
+app.use(cors());
 app.get("/gamedata", async (req, res) => {
     var data = await pulldata.GetGameData();
     res.json(data);
